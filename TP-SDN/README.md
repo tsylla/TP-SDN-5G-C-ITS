@@ -60,11 +60,9 @@ sudo groupadd -f docker
 # Si ce n'est pas déjà le cas, il faudra veiller à ce que le socket utilisé par Docker appartienne bien à ce groupe
 sudo chown root:docker /var/run/docker.sock
 
-sudo usermod -a -G docker "$(whoami)"
+sudo usermod -a -G docker $USER
 
 newgrp docker
-
-sudo systemctl restart docker
 ```
 
 
@@ -75,12 +73,12 @@ sudo systemctl restart docker
   Téléchargez l'image Docker "nginx".
 
    ```shell
-  docker pull nginx
+  docker pull nginx:latest
   ```
 
   - **Étape 2:** Lancez un conteneur NGINX.
 
-  Démarrez un conteneur NGINX en mode détaché.
+  Démarrez un conteneur NGINX en mode détaché (le conteneur tourne en arrière plan).
 
   ```shell
   docker run -d -p 8080:80 nginx
@@ -88,7 +86,7 @@ sudo systemctl restart docker
 
 - **Étape 3:** Accédez au serveur web NGINX.
 
-  Ouvrez un navigateur web et naviguez jusqu'à `http://localhost:8080`.
+Ouvrez un navigateur web et naviguez jusqu'à `http://localhost:8080`.
 
 Vous venez de lancer votre premier environnement conteneurisé, à partir de l'image NGINX (téléchargée depuis dockerhub, librairie en ligne qui contient l'ensemble des images docker).
 
@@ -192,8 +190,8 @@ Trois questions permettent de comprendre cette technologie et ses avantages :
 **Q.III** Quels sont les différents modèles SDN ?
 
 Note : Pour répondre à ces questions, vous pouvez éventuellement utiliser ces deux sources d'information : 
-https://www.vmware.com/fr/topics/glossary/content/software-defined-networking.html et 
-https://www.silicon.fr/hub/colt-hub/10-choses-a-savoir-pour-comprendre-le-sdn
+https://www.vmware.com/docs/208805aq-so-vcloud-guide-sd-wan-nfv-vfn-uslet-web et 
+https://docs.media.bitpipe.com/io_10x/io_108885/item_951685/Handbook_French_SDN.pdf
 
 ## 1. Mininet
 
