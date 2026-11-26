@@ -10,7 +10,7 @@ Ce TP doit vous permettre de comprendre un peu mieux le fonctionnement de SDN ap
 Notez que vous allez déployer un environnement basé sur la technologie Docker, ceci a pour but de 1) vous présenter la technologie de conteneurisation ainsi que NFV 2) pratiquer Docker de manière plus approfondie.
 
 **Important:** A la fin de la session, veuillez m'envoyer un rapport répondant aux questions posées dans ce TP à l'adresse : tidiane.sylla@univ-eiffel.fr
-
+> « Ce TP a été initialement élaboré par Dr Mendiboure Léo et Dr Dulout Romain.»
 ## Prérequis (15 minutes max)
 
 **Remarque** Cette partie peut être sautée par les personnes ayant des connaissances sur les principes et commandes de base de docker (l'idée de ce TP n'étant pas de vous former à docker et au devops de manière générale mais de vous introduire quelques concepts de docker). 
